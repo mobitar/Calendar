@@ -205,11 +205,14 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     NSMutableArray *days = [NSMutableArray new];
     for(int i = 1; i < _numberOfDaysInCurrentMonth + distanceFromBeginningOfWeek + 1; i++) {
         MBXDay *day = [MBXDay new];
+        day.month = month;
         if(i <= distanceFromBeginningOfWeek) {
             day.dummyObject = YES;
         } else {
             day.day = i - distanceFromBeginningOfWeek;
         }
+        [dateComponents setDay:day.day];
+        day.date = [_calendar dateFromComponents:dateComponents];
         [days addObject:day];
     }
     _days = days;
@@ -217,6 +220,13 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     self.monthLabel.text = _currentMonthName;
     
     [self.collectionView reloadData];
+}
+
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+    
+    [self.delegate calender:self didTransitionToMonth:_currentMonth];
 }
 
 - (IBAction)previousPressed:(id)sender

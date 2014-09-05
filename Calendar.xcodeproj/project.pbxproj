@@ -31,6 +31,14 @@
 		0413A7C419B8F6E0002FD053 /* MBXCalendarTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7C319B8F6E0002FD053 /* MBXCalendarTheme.m */; };
 		0413A7C719B8F7C2002FD053 /* MBXCalendarHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7C619B8F7C2002FD053 /* MBXCalendarHeaderCell.m */; };
 		0413A7C919B8F7CE002FD053 /* MBXCalendarHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0413A7C819B8F7CE002FD053 /* MBXCalendarHeaderCell.xib */; };
+		0413A7CB19B93B49002FD053 /* september-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0413A7CA19B93B49002FD053 /* september-data.json */; };
+		0413A7CE19B93B5C002FD053 /* MBXTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7CD19B93B5C002FD053 /* MBXTimePickerView.m */; };
+		0413A7D019B93B69002FD053 /* MBXTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0413A7CF19B93B69002FD053 /* MBXTimePickerView.xib */; };
+		0413A7D519B93C9B002FD053 /* MBXTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7D419B93C9B002FD053 /* MBXTimeCell.m */; };
+		0413A7D719B93CA5002FD053 /* MBXTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0413A7D619B93CA5002FD053 /* MBXTimeCell.xib */; };
+		0413A7DA19B93FAB002FD053 /* MBXTimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */; };
+		0413A7DD19B948CD002FD053 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */; };
+		0413A7E019B94EC4002FD053 /* MBXServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7DF19B94EC4002FD053 /* MBXServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +88,19 @@
 		0413A7C519B8F7C2002FD053 /* MBXCalendarHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXCalendarHeaderCell.h; sourceTree = "<group>"; };
 		0413A7C619B8F7C2002FD053 /* MBXCalendarHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXCalendarHeaderCell.m; sourceTree = "<group>"; };
 		0413A7C819B8F7CE002FD053 /* MBXCalendarHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBXCalendarHeaderCell.xib; sourceTree = "<group>"; };
+		0413A7CA19B93B49002FD053 /* september-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "september-data.json"; sourceTree = "<group>"; };
+		0413A7CC19B93B5C002FD053 /* MBXTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXTimePickerView.h; sourceTree = "<group>"; };
+		0413A7CD19B93B5C002FD053 /* MBXTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXTimePickerView.m; sourceTree = "<group>"; };
+		0413A7CF19B93B69002FD053 /* MBXTimePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBXTimePickerView.xib; sourceTree = "<group>"; };
+		0413A7D319B93C9B002FD053 /* MBXTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXTimeCell.h; sourceTree = "<group>"; };
+		0413A7D419B93C9B002FD053 /* MBXTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXTimeCell.m; sourceTree = "<group>"; };
+		0413A7D619B93CA5002FD053 /* MBXTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBXTimeCell.xib; sourceTree = "<group>"; };
+		0413A7D819B93FAB002FD053 /* MBXTimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXTimeSlot.h; sourceTree = "<group>"; };
+		0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXTimeSlot.m; sourceTree = "<group>"; };
+		0413A7DB19B948CD002FD053 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
+		0413A7DE19B94EC4002FD053 /* MBXServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXServer.h; sourceTree = "<group>"; };
+		0413A7DF19B94EC4002FD053 /* MBXServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +164,8 @@
 				0413A78419B8BF9F002FD053 /* MBXAppDelegate.m */,
 				0413A78919B8BF9F002FD053 /* MBXViewController.h */,
 				0413A78A19B8BF9F002FD053 /* MBXViewController.m */,
+				0413A7DE19B94EC4002FD053 /* MBXServer.h */,
+				0413A7DF19B94EC4002FD053 /* MBXServer.m */,
 				0413A7A919B8BFBB002FD053 /* Calendar */,
 				0413A77B19B8BF9F002FD053 /* Supporting Files */,
 			);
@@ -157,6 +180,7 @@
 				0413A77D19B8BF9F002FD053 /* InfoPlist.strings */,
 				0413A78019B8BF9F002FD053 /* main.m */,
 				0413A78219B8BF9F002FD053 /* Calendar-Prefix.pch */,
+				0413A7CA19B93B49002FD053 /* september-data.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,6 +211,36 @@
 				0413A7B719B8DE1C002FD053 /* MBXReservationView.h */,
 				0413A7B819B8DE1C002FD053 /* MBXReservationView.m */,
 				0413A7BA19B8DE26002FD053 /* MBXReservationView.xib */,
+				0413A7D119B93C84002FD053 /* Time Picker */,
+				0413A7D219B93C8A002FD053 /* Calendar */,
+				0413A7BC19B8DEF2002FD053 /* MBXDay.h */,
+				0413A7BD19B8DEF2002FD053 /* MBXDay.m */,
+				0413A7BF19B8EA64002FD053 /* MBXStrictFlowLayout.h */,
+				0413A7C019B8EA64002FD053 /* MBXStrictFlowLayout.m */,
+				0413A7DB19B948CD002FD053 /* NSDate+Calendar.h */,
+				0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		0413A7D119B93C84002FD053 /* Time Picker */ = {
+			isa = PBXGroup;
+			children = (
+				0413A7CC19B93B5C002FD053 /* MBXTimePickerView.h */,
+				0413A7CD19B93B5C002FD053 /* MBXTimePickerView.m */,
+				0413A7CF19B93B69002FD053 /* MBXTimePickerView.xib */,
+				0413A7D319B93C9B002FD053 /* MBXTimeCell.h */,
+				0413A7D419B93C9B002FD053 /* MBXTimeCell.m */,
+				0413A7D619B93CA5002FD053 /* MBXTimeCell.xib */,
+				0413A7D819B93FAB002FD053 /* MBXTimeSlot.h */,
+				0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */,
+			);
+			name = "Time Picker";
+			sourceTree = "<group>";
+		};
+		0413A7D219B93C8A002FD053 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
 				0413A7AA19B8BFCC002FD053 /* MBXCalendar.h */,
 				0413A7AB19B8BFCC002FD053 /* MBXCalendar.m */,
 				0413A7AD19B8C011002FD053 /* MBXCalendar.xib */,
@@ -196,10 +250,6 @@
 				0413A7C519B8F7C2002FD053 /* MBXCalendarHeaderCell.h */,
 				0413A7C619B8F7C2002FD053 /* MBXCalendarHeaderCell.m */,
 				0413A7C819B8F7CE002FD053 /* MBXCalendarHeaderCell.xib */,
-				0413A7BC19B8DEF2002FD053 /* MBXDay.h */,
-				0413A7BD19B8DEF2002FD053 /* MBXDay.m */,
-				0413A7BF19B8EA64002FD053 /* MBXStrictFlowLayout.h */,
-				0413A7C019B8EA64002FD053 /* MBXStrictFlowLayout.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -281,12 +331,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0413A7CB19B93B49002FD053 /* september-data.json in Resources */,
 				0413A7BB19B8DE26002FD053 /* MBXReservationView.xib in Resources */,
 				0413A78D19B8BF9F002FD053 /* Images.xcassets in Resources */,
 				0413A7AE19B8C011002FD053 /* MBXCalendar.xib in Resources */,
 				0413A7B619B8C1A6002FD053 /* MBXCalendarCell.xib in Resources */,
+				0413A7D019B93B69002FD053 /* MBXTimePickerView.xib in Resources */,
 				0413A7C919B8F7CE002FD053 /* MBXCalendarHeaderCell.xib in Resources */,
 				0413A77F19B8BF9F002FD053 /* InfoPlist.strings in Resources */,
+				0413A7D719B93CA5002FD053 /* MBXTimeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,11 +359,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0413A7C419B8F6E0002FD053 /* MBXCalendarTheme.m in Sources */,
+				0413A7E019B94EC4002FD053 /* MBXServer.m in Sources */,
+				0413A7DA19B93FAB002FD053 /* MBXTimeSlot.m in Sources */,
 				0413A7B419B8C19A002FD053 /* MBXCalendarCell.m in Sources */,
 				0413A78519B8BF9F002FD053 /* MBXAppDelegate.m in Sources */,
 				0413A7BE19B8DEF2002FD053 /* MBXDay.m in Sources */,
 				0413A7AC19B8BFCC002FD053 /* MBXCalendar.m in Sources */,
+				0413A7DD19B948CD002FD053 /* NSDate+Calendar.m in Sources */,
 				0413A78B19B8BF9F002FD053 /* MBXViewController.m in Sources */,
+				0413A7D519B93C9B002FD053 /* MBXTimeCell.m in Sources */,
+				0413A7CE19B93B5C002FD053 /* MBXTimePickerView.m in Sources */,
 				0413A7C719B8F7C2002FD053 /* MBXCalendarHeaderCell.m in Sources */,
 				0413A7C119B8EA64002FD053 /* MBXStrictFlowLayout.m in Sources */,
 				0413A78119B8BF9F002FD053 /* main.m in Sources */,

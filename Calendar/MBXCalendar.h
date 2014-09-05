@@ -17,6 +17,8 @@
 
 - (void)calender:(MBXCalendar *)calendar didSelectDay:(MBXDay *)day;
 
+- (void)calender:(MBXCalendar *)calendar didTransitionToMonth:(NSInteger)month;
+
 @end
 
 @interface MBXCalendar : UIView
