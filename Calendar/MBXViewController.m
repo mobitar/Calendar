@@ -26,6 +26,12 @@
     MBXReservationView *res = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MBXReservationView class]) owner:nil options:nil][0];
     res.dataSource = self;
     [self.view addSubview:res];
+    
+    CGRect frame = res.frame;
+    frame.origin.y = 50;
+    res.frame = frame;
+    
+    self.view.backgroundColor = res.backgroundColor;
 }
 
 #pragma mark - Reservation Delegate

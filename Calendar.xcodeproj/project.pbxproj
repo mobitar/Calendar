@@ -39,6 +39,9 @@
 		0413A7DA19B93FAB002FD053 /* MBXTimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */; };
 		0413A7DD19B948CD002FD053 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */; };
 		0413A7E019B94EC4002FD053 /* MBXServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7DF19B94EC4002FD053 /* MBXServer.m */; };
+		0413A7E319BA1B7D002FD053 /* MBXSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */; };
+		0413A7E619BA207C002FD053 /* UIView+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E519BA207C002FD053 /* UIView+Calendar.m */; };
+		0413A7E919BA2C31002FD053 /* MBXHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E819BA2C31002FD053 /* MBXHUDView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,12 @@
 		0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
 		0413A7DE19B94EC4002FD053 /* MBXServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXServer.h; sourceTree = "<group>"; };
 		0413A7DF19B94EC4002FD053 /* MBXServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXServer.m; sourceTree = "<group>"; };
+		0413A7E119BA1B7D002FD053 /* MBXSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXSegmentedButton.h; sourceTree = "<group>"; };
+		0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXSegmentedButton.m; sourceTree = "<group>"; };
+		0413A7E419BA207C002FD053 /* UIView+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Calendar.h"; sourceTree = "<group>"; };
+		0413A7E519BA207C002FD053 /* UIView+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Calendar.m"; sourceTree = "<group>"; };
+		0413A7E719BA2C31002FD053 /* MBXHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXHUDView.h; sourceTree = "<group>"; };
+		0413A7E819BA2C31002FD053 /* MBXHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXHUDView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +175,8 @@
 				0413A78A19B8BF9F002FD053 /* MBXViewController.m */,
 				0413A7DE19B94EC4002FD053 /* MBXServer.h */,
 				0413A7DF19B94EC4002FD053 /* MBXServer.m */,
+				0413A7E719BA2C31002FD053 /* MBXHUDView.h */,
+				0413A7E819BA2C31002FD053 /* MBXHUDView.m */,
 				0413A7A919B8BFBB002FD053 /* Calendar */,
 				0413A77B19B8BF9F002FD053 /* Supporting Files */,
 			);
@@ -211,6 +222,8 @@
 				0413A7B719B8DE1C002FD053 /* MBXReservationView.h */,
 				0413A7B819B8DE1C002FD053 /* MBXReservationView.m */,
 				0413A7BA19B8DE26002FD053 /* MBXReservationView.xib */,
+				0413A7E119BA1B7D002FD053 /* MBXSegmentedButton.h */,
+				0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */,
 				0413A7D119B93C84002FD053 /* Time Picker */,
 				0413A7D219B93C8A002FD053 /* Calendar */,
 				0413A7BC19B8DEF2002FD053 /* MBXDay.h */,
@@ -219,6 +232,8 @@
 				0413A7C019B8EA64002FD053 /* MBXStrictFlowLayout.m */,
 				0413A7DB19B948CD002FD053 /* NSDate+Calendar.h */,
 				0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */,
+				0413A7E419BA207C002FD053 /* UIView+Calendar.h */,
+				0413A7E519BA207C002FD053 /* UIView+Calendar.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -366,12 +381,15 @@
 				0413A7BE19B8DEF2002FD053 /* MBXDay.m in Sources */,
 				0413A7AC19B8BFCC002FD053 /* MBXCalendar.m in Sources */,
 				0413A7DD19B948CD002FD053 /* NSDate+Calendar.m in Sources */,
+				0413A7E919BA2C31002FD053 /* MBXHUDView.m in Sources */,
+				0413A7E619BA207C002FD053 /* UIView+Calendar.m in Sources */,
 				0413A78B19B8BF9F002FD053 /* MBXViewController.m in Sources */,
 				0413A7D519B93C9B002FD053 /* MBXTimeCell.m in Sources */,
 				0413A7CE19B93B5C002FD053 /* MBXTimePickerView.m in Sources */,
 				0413A7C719B8F7C2002FD053 /* MBXCalendarHeaderCell.m in Sources */,
 				0413A7C119B8EA64002FD053 /* MBXStrictFlowLayout.m in Sources */,
 				0413A78119B8BF9F002FD053 /* main.m in Sources */,
+				0413A7E319BA1B7D002FD053 /* MBXSegmentedButton.m in Sources */,
 				0413A7B919B8DE1C002FD053 /* MBXReservationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

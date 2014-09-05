@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 @end
 
 typedef NS_ENUM(NSInteger, MBXCalendarSection)
@@ -47,8 +48,6 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     
     // an array of MBXDay objects
     NSArray *_days;
-    
-    MBXDay *_selectedDay;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -102,6 +101,21 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    [self sizeToFit];
+}
+
+- (void)sizeToFit
+{
+    CGRect frame = self.frame;
+    frame.size.height = self.collectionView.contentSize.height + CGRectGetHeight(self.headerView.frame);
+    self.frame = frame;
+    
+    CGRect collectionFrame = self.collectionView.frame;
+    collectionFrame.size = frame.size;
+    self.collectionView.frame = collectionFrame;
+    
+    [self.delegate calenderDidResize:self];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
@@ -121,6 +135,21 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     _weekDaySymbols = _dateFormatter.weekdaySymbols;
   
     [self configureCurrentDates];
+}
+
+- (void)reset
+{
+    _selectedDay.selected = NO;
+    _selectedDay = nil;
+    
+    [self.collectionView reloadData];
+}
+
+- (void)setSelectedDay:(MBXDay *)selectedDay
+{
+    _selectedDay = selectedDay;
+    
+    [self.collectionView reloadData];
 }
 
 - (MBXStrictFlowLayout *)layout
@@ -164,6 +193,12 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     [self setMonth:nextMonth year:year];
     
     [self.collectionView reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self sizeToFit];
+    });
+    
+    [self.delegate calender:self didTransitionToMonth:nextMonth];
 }
 
 - (void)transitionToPreviousMonth
@@ -177,6 +212,12 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     [self setMonth:previousMonth year:year];
     
     [self.collectionView reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self sizeToFit];
+    });
+    
+    [self.delegate calender:self didTransitionToMonth:previousMonth];
 }
 
 - (void)setMonth:(NSInteger)month year:(NSInteger)year

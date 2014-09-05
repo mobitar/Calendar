@@ -15,6 +15,8 @@
 
 @optional
 
+- (void)calenderDidResize:(MBXCalendar *)calendar;
+
 - (void)calender:(MBXCalendar *)calendar didSelectDay:(MBXDay *)day;
 
 - (void)calender:(MBXCalendar *)calendar didTransitionToMonth:(NSInteger)month;
@@ -36,9 +38,11 @@
 @property (nonatomic) UIColor *cellDisabledFontColor;
 
 @property (nonatomic) UIColor *cellBorderColor;
-
 @property (nonatomic) CGFloat cellBorderWidth;
-
 @property (nonatomic) CGSize cellSize;
+
+@property (nonatomic, readwrite) MBXDay *selectedDay;
+
+- (void)reset;
 
 @end

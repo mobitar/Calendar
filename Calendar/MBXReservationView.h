@@ -34,7 +34,13 @@ typedef NS_ENUM(NSInteger, MBXReservationType)
 @property (nonatomic) MBXCalendar *calendar;
 @property (nonatomic) MBXTimePickerView *timePicker;
 
+@property (nonatomic, readwrite) MBXDay *selectedDay;
+@property (nonatomic, readwrite) MBXTimeSlot *selectedTime;
+
 @property (nonatomic, weak) id<MBXReservationViewDataSource> dataSource;
 @property (nonatomic, weak) id<MBXReservationDelegate> delegate;
+
+/** Use this to switch to different tabs */
+- (void)switchToMode:(MBXReservationType)type;
 
 @end

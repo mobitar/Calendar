@@ -11,5 +11,8 @@
 @interface MBXCalendarTheme : NSObject
 
 + (UIColor *)lightGrayColor;
++ (UIColor *)darkGrayColor;
++ (UIColor *)blueColor;
++ (UIColor *)lightGrayBackgroundColor;
 
 @end

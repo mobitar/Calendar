@@ -27,7 +27,7 @@
             currentFrame.origin.y = CGRectGetMinY(prevLayoutAttributes.frame);
         } else {
             currentFrame.origin.x = 0;
-            currentFrame.origin.y = CGRectGetMaxY(prevLayoutAttributes.frame);
+            currentFrame.origin.y = CGRectGetMaxY(prevLayoutAttributes.frame) + self.minimumLineSpacing;
         }
         currentLayoutAttributes.frame = currentFrame;
     }

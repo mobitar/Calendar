@@ -8,38 +8,53 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MBXReservationView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="437"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
-                <view appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" id="75r-19-uE5" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="60" width="320" height="377"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" id="h37-pL-3Rw" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sRe-Yc-Qw4" customClass="MBXSegmentedButton">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Select Date">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectDatePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="dt5-iy-pld"/>
+                            </connections>
+                        </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTo-Om-tkm" customClass="MBXSegmentedButton">
+                            <rect key="frame" x="159" y="0.0" width="161" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Select Time">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectTimePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="f7h-Sh-dOO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sRe-Yc-Qw4">
-                    <rect key="frame" x="9" y="15" width="134" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Select Date">
+                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fj6-k4-leT" customClass="MBXSegmentedButton">
+                    <rect key="frame" x="0.0" y="398" width="320" height="39"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Clear All">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectDatePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="dt5-iy-pld"/>
-                    </connections>
-                </button>
-                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTo-Om-tkm">
-                    <rect key="frame" x="174" y="15" width="134" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Select Time">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="selectTimePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="f7h-Sh-dOO"/>
+                        <action selector="clearAllPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="1ih-fa-3xM"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="contentView" destination="75r-19-uE5" id="3d9-fy-GaU"/>
+                <outlet property="clearAllButton" destination="fj6-k4-leT" id="lhI-p5-1nC"/>
+                <outlet property="dateButton" destination="sRe-Yc-Qw4" id="asi-75-del"/>
+                <outlet property="headerView" destination="h37-pL-3Rw" id="2cl-sp-4NI"/>
+                <outlet property="timeButton" destination="OTo-Om-tkm" id="Tth-W2-c5F"/>
             </connections>
         </view>
     </objects>

@@ -17,6 +17,6 @@
 @property (nonatomic, getter = isDummyObject) BOOL dummyObject;
 @property (nonatomic, getter = isSelected) BOOL selected;
 
-- (NSDateComponents *)components;
+- (NSString *)dateString;
 
 @end

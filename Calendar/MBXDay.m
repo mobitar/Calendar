@@ -25,4 +25,11 @@
     return [[NSString stringWithFormat:@"%i%i%i", self.day, self.month, self.year] hash];
 }
 
+- (NSString *)dateString
+{
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"EEE',' MMM d"];
+    return [formatter stringFromDate:self.date];
+}
+
 @end
