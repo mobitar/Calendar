@@ -57,7 +57,7 @@
           forCellWithReuseIdentifier:NSStringFromClass([MBXTimeCell class])];
     
     self.startTime = @"8:00 am";
-    self.endTime = @"5:00 pm";
+    self.endTime = @"5:30 pm";
     self.timeZone = [NSTimeZone timeZoneWithName:@"America/Chicago"];
     self.slotSize = 60*30;
     self.date = [NSDate date];

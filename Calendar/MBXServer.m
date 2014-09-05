@@ -18,7 +18,7 @@
         return [self septemberTimeSlots];
     } else {
         NSDate *date = [[NSDate date] dateBySettingMonth:month day:1];
-        NSArray *slots = [MBXTimeSlot createArrayOfTimeSlotsForEverydayInMonthOfDate:date startingAtTime:@"8:00 am" endTime:@"5:00 pm" inTimeZone:@"America/Chicago" slotDuration:60*30];
+        NSArray *slots = [MBXTimeSlot createArrayOfTimeSlotsForEverydayInMonthOfDate:date startingAtTime:@"8:00 am" endTime:@"5:00 pm" inTimeZone:[NSTimeZone timeZoneWithName:@"America/Chicago"] slotDuration:60*30];
         return slots;
     }
 }

@@ -65,7 +65,6 @@ static NSString *const MBXTimeFormat = @"h:mm a";
             slot.startDate = [currentDate dateBySettingYearMonthAndDayFromDate:date];
             slot.endDate = [nextDate dateBySettingYearMonthAndDayFromDate:date];
             slot.timeZone = timeZone;
-//            NSLog(@"startDate:%@ endDate:%@", slot.startDate, slot.endDate);
             [slots addObject:slot];
             currentDate = nextDate;
         } else {
