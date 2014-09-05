@@ -10,5 +10,5 @@
 
 @interface MBXTimeCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-
+@property (nonatomic) BOOL crossedOut;
 @end

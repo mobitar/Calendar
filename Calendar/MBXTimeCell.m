@@ -7,16 +7,39 @@
 //
 
 #import "MBXTimeCell.h"
+#import "MBXSlashView.h"
+
+@interface MBXTimeCell ()
+@property (nonatomic) MBXSlashView *slashView;
+@end
 
 @implementation MBXTimeCell
 
-- (id)initWithFrame:(CGRect)frame
+- (void)layoutSubviews
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    [super layoutSubviews];
+    
+    _slashView.frame = self.bounds;
+}
+
+- (MBXSlashView *)slashView
+{
+    if(!_slashView) {
+        self.slashView = [[MBXSlashView alloc] initWithFrame:self.bounds];
     }
-    return self;
+    
+    return _slashView;
+}
+
+- (void)setCrossedOut:(BOOL)crossedOut
+{
+    _crossedOut = crossedOut;
+    
+    if(crossedOut) {
+        [self addSubview:self.slashView];
+    } else {
+        [_slashView removeFromSuperview];
+    }
 }
 
 @end

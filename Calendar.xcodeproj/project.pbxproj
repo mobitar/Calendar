@@ -42,6 +42,7 @@
 		0413A7E319BA1B7D002FD053 /* MBXSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */; };
 		0413A7E619BA207C002FD053 /* UIView+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E519BA207C002FD053 /* UIView+Calendar.m */; };
 		0413A7E919BA2C31002FD053 /* MBXHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7E819BA2C31002FD053 /* MBXHUDView.m */; };
+		0413A7EF19BA2FD5002FD053 /* MBXSlashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0413A7EE19BA2FD5002FD053 /* MBXSlashView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		0413A7E519BA207C002FD053 /* UIView+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Calendar.m"; sourceTree = "<group>"; };
 		0413A7E719BA2C31002FD053 /* MBXHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXHUDView.h; sourceTree = "<group>"; };
 		0413A7E819BA2C31002FD053 /* MBXHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXHUDView.m; sourceTree = "<group>"; };
+		0413A7ED19BA2FD5002FD053 /* MBXSlashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXSlashView.h; sourceTree = "<group>"; };
+		0413A7EE19BA2FD5002FD053 /* MBXSlashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXSlashView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +178,6 @@
 				0413A78A19B8BF9F002FD053 /* MBXViewController.m */,
 				0413A7DE19B94EC4002FD053 /* MBXServer.h */,
 				0413A7DF19B94EC4002FD053 /* MBXServer.m */,
-				0413A7E719BA2C31002FD053 /* MBXHUDView.h */,
-				0413A7E819BA2C31002FD053 /* MBXHUDView.m */,
 				0413A7A919B8BFBB002FD053 /* Calendar */,
 				0413A77B19B8BF9F002FD053 /* Supporting Files */,
 			);
@@ -217,23 +218,14 @@
 		0413A7A919B8BFBB002FD053 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				0413A7C219B8F6E0002FD053 /* MBXCalendarTheme.h */,
-				0413A7C319B8F6E0002FD053 /* MBXCalendarTheme.m */,
+				0413A7EA19BA2F89002FD053 /* Theme */,
 				0413A7B719B8DE1C002FD053 /* MBXReservationView.h */,
 				0413A7B819B8DE1C002FD053 /* MBXReservationView.m */,
 				0413A7BA19B8DE26002FD053 /* MBXReservationView.xib */,
-				0413A7E119BA1B7D002FD053 /* MBXSegmentedButton.h */,
-				0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */,
 				0413A7D119B93C84002FD053 /* Time Picker */,
 				0413A7D219B93C8A002FD053 /* Calendar */,
-				0413A7BC19B8DEF2002FD053 /* MBXDay.h */,
-				0413A7BD19B8DEF2002FD053 /* MBXDay.m */,
-				0413A7BF19B8EA64002FD053 /* MBXStrictFlowLayout.h */,
-				0413A7C019B8EA64002FD053 /* MBXStrictFlowLayout.m */,
-				0413A7DB19B948CD002FD053 /* NSDate+Calendar.h */,
-				0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */,
-				0413A7E419BA207C002FD053 /* UIView+Calendar.h */,
-				0413A7E519BA207C002FD053 /* UIView+Calendar.m */,
+				0413A7EC19BA2FB8002FD053 /* Model */,
+				0413A7EB19BA2FA2002FD053 /* Categories */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -247,8 +239,6 @@
 				0413A7D319B93C9B002FD053 /* MBXTimeCell.h */,
 				0413A7D419B93C9B002FD053 /* MBXTimeCell.m */,
 				0413A7D619B93CA5002FD053 /* MBXTimeCell.xib */,
-				0413A7D819B93FAB002FD053 /* MBXTimeSlot.h */,
-				0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */,
 			);
 			name = "Time Picker";
 			sourceTree = "<group>";
@@ -267,6 +257,45 @@
 				0413A7C819B8F7CE002FD053 /* MBXCalendarHeaderCell.xib */,
 			);
 			name = Calendar;
+			sourceTree = "<group>";
+		};
+		0413A7EA19BA2F89002FD053 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0413A7C219B8F6E0002FD053 /* MBXCalendarTheme.h */,
+				0413A7C319B8F6E0002FD053 /* MBXCalendarTheme.m */,
+				0413A7E719BA2C31002FD053 /* MBXHUDView.h */,
+				0413A7E819BA2C31002FD053 /* MBXHUDView.m */,
+				0413A7E119BA1B7D002FD053 /* MBXSegmentedButton.h */,
+				0413A7E219BA1B7D002FD053 /* MBXSegmentedButton.m */,
+				0413A7BF19B8EA64002FD053 /* MBXStrictFlowLayout.h */,
+				0413A7C019B8EA64002FD053 /* MBXStrictFlowLayout.m */,
+				0413A7ED19BA2FD5002FD053 /* MBXSlashView.h */,
+				0413A7EE19BA2FD5002FD053 /* MBXSlashView.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		0413A7EB19BA2FA2002FD053 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0413A7DB19B948CD002FD053 /* NSDate+Calendar.h */,
+				0413A7DC19B948CD002FD053 /* NSDate+Calendar.m */,
+				0413A7E419BA207C002FD053 /* UIView+Calendar.h */,
+				0413A7E519BA207C002FD053 /* UIView+Calendar.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0413A7EC19BA2FB8002FD053 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0413A7D819B93FAB002FD053 /* MBXTimeSlot.h */,
+				0413A7D919B93FAB002FD053 /* MBXTimeSlot.m */,
+				0413A7BC19B8DEF2002FD053 /* MBXDay.h */,
+				0413A7BD19B8DEF2002FD053 /* MBXDay.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +413,7 @@
 				0413A7E919BA2C31002FD053 /* MBXHUDView.m in Sources */,
 				0413A7E619BA207C002FD053 /* UIView+Calendar.m in Sources */,
 				0413A78B19B8BF9F002FD053 /* MBXViewController.m in Sources */,
+				0413A7EF19BA2FD5002FD053 /* MBXSlashView.m in Sources */,
 				0413A7D519B93C9B002FD053 /* MBXTimeCell.m in Sources */,
 				0413A7CE19B93B5C002FD053 /* MBXTimePickerView.m in Sources */,
 				0413A7C719B8F7C2002FD053 /* MBXCalendarHeaderCell.m in Sources */,

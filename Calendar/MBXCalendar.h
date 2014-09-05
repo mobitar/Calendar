@@ -27,6 +27,8 @@
 
 @property (nonatomic, weak) id<MBXCalendarDelegate> delegate;
 
+@property (nonatomic) BOOL navigationToPastMonthsAllowed;
+
 @property (nonatomic) UIColor *monthLabelFontColor;
 
 @property (nonatomic) UIColor *cellSelectedBackgroundColor;

@@ -121,8 +121,10 @@ static CGFloat const MBXItemSpacing = 3;
     MBXTimeSlot *slot = self.allTimeSlots[indexPath.row];
     if([self.availableTimeSlots containsObject:slot]) {
         cell.timeLabel.textColor = self.cellTextColor;
+        cell.crossedOut = NO;
     } else {
         cell.timeLabel.textColor = self.cellDisabledTextColor;
+        cell.crossedOut = YES;
     }
     
     cell.backgroundColor = self.cellPassiveBackgroundColor;

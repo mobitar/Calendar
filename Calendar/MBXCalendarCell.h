@@ -10,4 +10,5 @@
 
 @interface MBXCalendarCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *dayLabel;
+@property (nonatomic) BOOL crossedOut;
 @end

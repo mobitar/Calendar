@@ -48,6 +48,9 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     
     // an array of MBXDay objects
     NSArray *_days;
+    
+    // actual present values of real time, these do not change when set
+    NSInteger _presentMonth, _presentYear, _presentDay;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -174,7 +177,10 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
 {
     _currentDate = [NSDate date];
     NSDateComponents *dateComponents  = [_calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:_currentDate];
-    [self setMonth:[dateComponents month] year:[dateComponents year]];
+    _presentMonth = [dateComponents month];
+    _presentYear = [dateComponents year];
+    _presentDay = [dateComponents day];
+    [self setMonth:_presentMonth year:_presentYear];
 }
 
 - (NSInteger)numberOfDaysInMonthOfDate:(NSDate *)date
@@ -209,6 +215,11 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
         previousMonth = MBXNumberOfMonthsInYear;
         year--;
     }
+    
+    if(self.navigationToPastMonthsAllowed == NO && previousMonth < _presentMonth && year <= _presentYear) {
+        return;
+    }
+    
     [self setMonth:previousMonth year:year];
     
     [self.collectionView reloadData];
@@ -315,9 +326,9 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     if(day.isSelected) {
         cell.backgroundColor = self.cellSelectedBackgroundColor;
         cell.dayLabel.textColor = self.cellSelectedFontColor;
-    } else if(day.isDummyObject) {
+    } else if(day.isDummyObject || [self isDayInPast:day]) {
         cell.backgroundColor = self.cellDisabledBackgroundColor;
-        cell.dayLabel.textColor = self.cellPassiveFontColor;
+        cell.dayLabel.textColor = self.cellDisabledFontColor;
     } else {
         cell.backgroundColor = self.cellPassiveBackgroundColor;
         cell.dayLabel.textColor = self.cellPassiveFontColor;
@@ -325,6 +336,11 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
     
     cell.layer.borderColor = self.cellBorderColor.CGColor;
     cell.layer.borderWidth = self.cellBorderWidth/2.0; // since cells overlap, we divide the border by 2 to acheive desired effect
+}
+
+- (BOOL)isDayInPast:(MBXDay *)day
+{
+    return day.day < _presentDay && day.month <= _presentMonth && day.year <= _presentYear;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

@@ -148,7 +148,7 @@
     self.availableTimeSlotsForCurrentMonth = [self.dataSource reservationViewAvailableTimeSlotsForMonth:month];
     
     MBXHUDView *hud = [MBXHUDView HUDAddedToView:self.window withText:@"Loading..."];
-    [hud dismissAfter:1.0];
+    [hud dismissAfter:0.4];
 }
 
 - (void)calender:(MBXCalendar *)calendar didSelectDay:(MBXDay *)day
