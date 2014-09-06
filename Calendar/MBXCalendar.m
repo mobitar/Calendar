@@ -278,7 +278,9 @@ static NSUInteger const MBXNumberOfDaysInWeek = 7;
 {
     [super didMoveToSuperview];
     
-    [self.delegate calender:self didTransitionToMonth:_currentMonth];
+    if(self.superview) {
+        [self.delegate calender:self didTransitionToMonth:_currentMonth];
+    }
 }
 
 - (IBAction)previousPressed:(id)sender

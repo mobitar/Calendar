@@ -49,6 +49,7 @@
     self.clearAllButton.layer.borderWidth = 0.5;
     
     self.timePicker = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([MBXTimePickerView class]) owner:nil options:nil][0];
+    self.timePicker.delegate = self;
     
     [self collapse];
     
@@ -70,12 +71,13 @@
     UIView *activeView = nil;
     if(type == MBXReservationTypeDate) {
         activeView = self.calendar;
-        [self.timePicker removeFromSuperview];
+        self.timePicker.hidden = YES;
     } else {
         activeView = self.timePicker;
-        [self.calendar removeFromSuperview];
+        self.calendar.hidden = YES;
     }
     
+    activeView.hidden = NO;
     [self addSubview:activeView];
     
     [self expandToView:activeView];
@@ -126,6 +128,8 @@
 {
     [self.calendar reset];
     [self.timePicker reset];
+    [self.dateButton setTitle:NSLocalizedString(@"Select Date", nil) forState:UIControlStateNormal];
+    [self.timeButton setTitle:NSLocalizedString(@"Select Time", nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - Setters
@@ -174,6 +178,8 @@
 - (void)timePicker:(MBXTimePickerView *)timePicker didSelectTimeSlot:(MBXTimeSlot *)timeSlot
 {
     _selectedTime = timeSlot;
+    [self.timeButton setTitle:timeSlot.startTime forState:UIControlStateNormal];
+    [self collapse];
 }
 
 @end
